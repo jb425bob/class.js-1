@@ -1,0 +1,6 @@
+{
+    "name"    : "Class.js",
+    "description": "A Simple JavaScript Class class from 'JavaScript Web Applications'",
+    "version" : "0.0.1",
+    "main"    : "./dist/class.js"
+}
