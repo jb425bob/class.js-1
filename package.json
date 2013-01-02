@@ -1,5 +1,5 @@
 {
-    "name": "Class",
+    "name": "JS-Class",
     "description": "Simple Class library for JavaScript taken from JavaScript Web Applications",
     "author": "Matthew Strickland <matthew@redcrown.co>",
     "version": "0.0.1",
@@ -8,5 +8,9 @@
         "mocha": "*",
         "chai": "*"
     },
-    "engine": "node 0.8.6"
+    "jam": {
+        "main": "dist/class.js"
+    },
+    "engine": "node 0.8.6",
+    "github": "https://github.com/matthewstrickland22/class.js"
 }
