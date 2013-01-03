@@ -8,7 +8,7 @@
         }
 
         if ( parent ) {
-            ctor.prototype              = parent;
+            ctor.prototype              = parent.prototype;
             klass.prototype             = new ctor;
             klass.prototype.constructor = klass;
             klass._super                = parent.prototype;
