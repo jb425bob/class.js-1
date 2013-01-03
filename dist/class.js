@@ -36,6 +36,13 @@
             if (extended) extended(klass);
         };
 
+        klass.create = function (protoProps, staticProps) {
+            var Klass = new Class(klass);
+            if (protoProps)  Klass.include(protoProps);
+            if (staticProps) Klass.extend(staticProps);
+            return Klass;
+        };
+
         klass.proxy = function (func) {
             var self = this;
             return function() {
