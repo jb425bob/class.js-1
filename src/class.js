@@ -20,7 +20,7 @@
         klass.fn        = klass.prototype;
         klass.fn.parent = klass;
 
-        klass.include = function (obj) {
+        klass.extend = function (obj) {
             var included = obj.included;
             for (var prop in obj) {
                 klass[prop] = obj[prop];
@@ -28,7 +28,7 @@
             if (included) included(klass);
         };
 
-        klass.extend = function (obj) {
+        klass.include = function (obj) {
             var extended = obj.extended;
             for (var prop in obj) {
                 klass.fn[prop] = obj[prop];
