@@ -5,11 +5,13 @@
     "version": "0.0.1",
     "private": true,
     "devDependencies": {
-        "mocha": "*",
-        "chai": "*"
+        "mocha" : "*",
+        "chai"  : "*",
+        "sinon" : "*"
     },
     "jam": {
-        "main": "dist/class.js"
+        "main"            : "dist/class.js",
+        "backbone-events" : "1.0.0"
     },
     "engine": "node 0.8.6",
     "github": "https://github.com/matthewstrickland22/class.js"
