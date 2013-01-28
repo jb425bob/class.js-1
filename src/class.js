@@ -43,18 +43,20 @@
             klass._super                = parent.prototype;
         }
 
-        klass.prototype.init = function () {};
+        if (typeof klass.prototype.init !== "function")
+            klass.prototype.init = function () {};
 
         // Shortcuts
         klass.fn        = klass.prototype;
         klass.fn.parent = klass;
 
-        klass.extend = function (obj) {
-            var included = obj.included;
-            for (var prop in obj) {
-                klass[prop] = obj[prop];
-            }
-            if (included) included(klass);
+        klass.extend = function (protoProps) {
+            var ExtendedKlass = Class(klass)
+
+            if (protoProps)
+                ExtendedKlass.include(protoProps);
+
+            return ExtendedKlass;
         };
 
         klass.include = function (obj) {
